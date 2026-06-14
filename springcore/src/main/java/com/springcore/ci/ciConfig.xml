@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+    <bean class="com.springcore.ci.Certi" name="cert" c:name="Java is Programing Language"/>
+<!--    <bean class="com.springcore.ci.Certi" name="cert">-->
+<!--        <constructor-arg value="Java is Programing Language" />-->
+<!--    </bean>-->
+
+    <bean class="com.springcore.ci.Person" name="person">
+        <constructor-arg value="Santosh Kumar"/>
+        <constructor-arg value="023" type="int"/>
+        <constructor-arg ref="cert" />
+        <constructor-arg>
+            <list>
+                <value>9833218135</value>
+                <value>8879457995</value>
+            </list>
+        </constructor-arg>
+    </bean>
+<!-- Ambiguity Problem and its Solution with Constructor Injection | Spring Framework -->
+    <bean class="com.springcore.ci.Addition" name="add">
+        <constructor-arg value="14"  />
+        <constructor-arg value="23" />
+    </bean>
+    <bean class="com.springcore.ci.Addition" name="addInt">
+        <constructor-arg value="05" type="int" index="1" />
+        <constructor-arg value="20" type="int" index="0"/>
+    </bean>
+    <!-- Ambiguity Problem and its Solution with Constructor Injection | Spring Framework End -->
+
+</beans>

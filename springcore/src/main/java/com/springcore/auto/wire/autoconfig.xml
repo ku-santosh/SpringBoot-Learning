@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+    <bean class="com.springcore.auto.wire.Address" name="address">
+        <property name="street" value="Baif Road"></property>
+        <property name="city" value="Wagholi Pune"></property>
+    </bean>
+
+    <bean class="com.springcore.auto.wire.Address" name="address1">
+        <property name="street" value="Nagar Road"></property>
+        <property name="city" value="Nagar Road, Wagholi Pune"></property>
+    </bean>
+
+    <bean class="com.springcore.auto.wire.Employee" name="employee" autowire="byName">
+
+    </bean>
+
+
+   <!-- <bean class="com.springcore.Student" name="student1">
+        &lt;!&ndash; collaborators and configuration for this bean go here &ndash;&gt;
+        <property name="studentId"><value>023</value></property>
+        <property name="studentName"><value>Santosh Kumar</value></property>
+        <property name="studentAddress"><value>Pune</value></property>
+    </bean>
+    <bean class="com.springcore.Student" name="student2">
+        &lt;!&ndash; collaborators and configuration for this bean go here &ndash;&gt;
+        <property name="studentId" value="025"/>
+        <property name="studentName" value="Soni Kumari"/>
+        <property name="studentAddress" value="Mumbai"/>
+    </bean>
+    <bean class="com.springcore.Student" name="student3" p:studentId="019" p:studentName="Aaradhya Gupta" p:studentAddress="Pune" />-->
+</beans>

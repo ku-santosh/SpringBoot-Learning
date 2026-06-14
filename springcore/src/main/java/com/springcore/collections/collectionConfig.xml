@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+    <bean class="com.springcore.collections.Emp" name="emp1">
+        <!-- collaborators and configuration for this bean go here -->
+        <property name="name" value="Santosh Kumar"/>
+        <property name="phones">
+            <list>
+                <value>+91 9833218135</value>
+                <value>+91 8879457995</value>
+            </list>
+        </property>
+        <property name="address">
+            <set>
+                <value>Mumbai</value>
+                <value>Pune</value>
+            </set>
+        </property>
+        <property name="courses">
+            <map>
+                <entry key="Java" value="2Month"></entry>
+                <entry key="reactJs" value="3Month"></entry>
+            </map>
+        </property>
+        <property name="props">
+            <props>
+                <prop key="name">Aaradhya Gupta</prop>
+                <prop key="address">Pune</prop>
+            </props>
+
+        </property>
+
+    </bean>
+
+    <bean class="com.springcore.Student" name="student3" p:studentId="019" p:studentName="Aaradhya Gupta" p:studentAddress="Pune" />
+</beans>
